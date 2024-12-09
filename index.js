@@ -1,60 +1,3 @@
-// const express = require('express');
-// const mongoose = require('mongoose');
-// const passport = require('passport');
-// const bodyParser = require('body-parser');
-// const session = require('express-session');
-// const cors = require('cors'); // Import CORS
-// require('dotenv').config();
-// require('./passport/passport'); // Import Passport configuration
-
-// const app = express();
-
-// // Middleware
-// app.use(cors({
-//   origin: 'http://localhost:4200', // Allow requests from Angular app
-//   methods: ['GET', 'POST', 'PUT', 'DELETE'], // Specify allowed HTTP methods
-//   credentials: true, // If using cookies or credentials
-// }));
-// app.options('*', cors()); // Handle preflight requests
-// app.use(bodyParser.json());
-// app.use(passport.initialize());
-
-
-
-
-
-
-// // Connect to MongoDB
-// mongoose.connect(process.env.MONGO_URI)
-//   .then(() => console.log('Connected to MongoDB'))
-//   .catch(err => console.error('MongoDB connection error:', err));
-
-// // Facebook Token Authentication Route
-// app.post('/auth/facebook/token',
-//     passport.authenticate('facebook-token', { session: true }), // Make sure session is true
-//     (req, res) => {
-//       if (req.user) {
-//         res.status(200).json({
-//           message: 'Login successful',
-//           user: req.user,
-//         });
-//       } else {
-//         res.status(401).json({ message: 'Unauthorized' });
-//       }
-//     }
-//   );
-
-// // Test Route
-// app.get('/', (req, res) => {
-//   res.send('Facebook Authentication API is running');
-// });
-
-// // Start Server
-// const PORT = process.env.PORT || 5000;
-// app.listen(PORT, () => console.log(`Server running on http://localhost:${PORT}`));
-
-
-
 
 const express = require('express');
 const mongoose = require('mongoose');
@@ -69,7 +12,7 @@ const app = express();
 
 // Middleware
 app.use(cors({
-  origin: 'http://localhost:4200', // Allow requests from Angular app
+  origin: 'https://subtle-pika-97a962.netlify.app/', // Allow requests from Angular app
   methods: ['GET', 'POST', 'PUT', 'DELETE'], // Specify allowed HTTP methods
   credentials: true, // If using cookies or credentials
 }));
